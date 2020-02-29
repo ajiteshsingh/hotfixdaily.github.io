@@ -22,7 +22,9 @@ export class PostpageComponent implements OnInit, AfterViewInit {
     private fetchDataService: FetchDataService
   ) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    console.log("adding console");
+  }
   ngAfterViewInit() {
     this.router.params.subscribe(params => {
       const postQueryParams = params["id"];
