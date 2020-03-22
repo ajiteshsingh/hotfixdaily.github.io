@@ -1,11 +1,11 @@
-import { Component, OnInit, AfterViewInit } from "@angular/core";
-import { Category, DisplayCategory } from "src/app/models/db-collections";
-import { FetchDataService } from "src/app/services/fetch-data.service";
+import { Component, OnInit, AfterViewInit } from '@angular/core';
+import { Category, DisplayCategory } from 'src/app/models/db-collections';
+import { FetchDataService } from 'src/app/services/fetch-data.service';
 
 @Component({
-  selector: "app-header",
-  templateUrl: "./header.component.html",
-  styleUrls: ["./header.component.scss"]
+  selector: 'app-header',
+  templateUrl: './header.component.html',
+  styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit, AfterViewInit {
   allCategories: Category[];
@@ -13,7 +13,7 @@ export class HeaderComponent implements OnInit, AfterViewInit {
     important: [],
     more: []
   };
-  constructor(private fetchDataService: FetchDataService) {}
+  constructor(private fetchDataService: FetchDataService) { }
 
   ngOnInit() {
     this.fetchDataService.getAllCategories().subscribe(categories => {
@@ -21,7 +21,11 @@ export class HeaderComponent implements OnInit, AfterViewInit {
       this.createDisplayCategoriess();
     });
   }
-  ngAfterViewInit() {}
+  ngAfterViewInit() { }
+
+  openGithubRepo() {
+    window.open('https://github.com/hotfixdaily/hotfixdaily.github.io');
+  }
 
   createDisplayCategoriess() {
     const impCategory = [];
@@ -30,13 +34,13 @@ export class HeaderComponent implements OnInit, AfterViewInit {
         impCategory.push(this.allCategories[i]);
       }
     }
-    this.displayCategories["important"] = impCategory;
+    this.displayCategories.important = impCategory;
     if (this.allCategories.length > 4) {
-      this.displayCategories["more"] = this._getMoreCategories(
+      this.displayCategories.more = this._getMoreCategories(
         this.allCategories.slice(4)
       );
     }
-    console.log("display");
+    console.log('display');
     console.log(this.displayCategories);
   }
 
@@ -53,5 +57,5 @@ export class HeaderComponent implements OnInit, AfterViewInit {
     return response;
   }
 
-  selectCategory(category: Category) {}
+  selectCategory(category: Category) { }
 }
