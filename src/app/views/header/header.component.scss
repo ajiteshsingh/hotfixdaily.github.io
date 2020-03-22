@@ -17,9 +17,27 @@
   padding: 0 20px;
 }
 
-.logo {
-  font-size: 28px;
-  font-weight: 900;
+.logo-wrapper {
+  display: flex;
+  flex-direction: row;
+
+  .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+      width: 45px;
+    }
+  }
+
+  .name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 28px;
+    font-weight: 900;
+    font-family: $font-family;
+  }
 }
 
 .github-link {

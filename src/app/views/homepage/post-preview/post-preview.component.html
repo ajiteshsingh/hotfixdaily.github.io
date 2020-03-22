@@ -5,10 +5,10 @@
     <h2>{{ blogData.headline }}</h2>
     <div class="post-description">{{ blogData.description }}</div>
     <div class="about-blog">
-      <div>
+      <div class="about">
         {{ blogData?.timestamp?.seconds * 1000 | date }}
       </div>
-      <div>, &nbsp;{{ blogData.author }}</div>
+      <div class="about">, &nbsp;{{ blogData.author }}</div>
     </div>
     <!-- <div class="author">{{blogData.author}}</div> -->
     <!-- <div>{{ blogData.timestamp }}</div> -->

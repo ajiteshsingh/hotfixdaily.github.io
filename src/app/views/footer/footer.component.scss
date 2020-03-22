@@ -1,0 +1,20 @@
+@import "src/app/style/variables";
+.footer-wrapper {
+  // margin-top: 100px;
+  // height: 200px;
+  height: 50px;
+  margin-top: -50px;
+  width: 100%;
+  background-color: #000000;
+  color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  .links {
+    font-family: $font-family;
+    padding: 10px;
+    cursor: pointer;
+  }
+}
