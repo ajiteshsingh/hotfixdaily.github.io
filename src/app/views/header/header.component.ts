@@ -1,6 +1,7 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { Category, DisplayCategory } from 'src/app/models/db-collections';
 import { FetchDataService } from 'src/app/services/fetch-data.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -13,15 +14,19 @@ export class HeaderComponent implements OnInit, AfterViewInit {
     important: [],
     more: []
   };
-  constructor(private fetchDataService: FetchDataService) { }
+  constructor(private fetchDataService: FetchDataService, private router: Router) { }
 
   ngOnInit() {
     this.fetchDataService.getAllCategories().subscribe(categories => {
       this.allCategories = categories;
-
       // this.createDisplayCategoriess();
     });
   }
+
+  reRouteHomePage() {
+    this.router.navigateByUrl('/');
+  }
+
   ngAfterViewInit() { }
 
   openGithubRepo() {

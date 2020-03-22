@@ -25,7 +25,7 @@
         </ng-container>
 
         <ng-container *ngIf="component.type == 'html'">
-          <div [innerHtml]="component.text"></div>
+          <div class="text" [innerHtml]="component.text"></div>
         </ng-container>
 
         <ng-container *ngIf="component.type == 'quote'">

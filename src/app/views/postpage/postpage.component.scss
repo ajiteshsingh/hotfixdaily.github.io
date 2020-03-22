@@ -1,7 +1,7 @@
 @import "src/app/style/variables";
 
 .postpage-wrapper {
-  max-width: 1032px !important;
+  max-width: 680px !important;
   margin: 0 auto;
 }
 
@@ -21,6 +21,18 @@ h2,
 p,
 div {
   font-family: $font-family;
+}
+
+p {
+  line-height: 25px;
+}
+.text {
+  line-height: 25px;
+  font-family: $font-family;
+  b {
+    line-height: 25px;
+    font-family: $font-family;
+  }
 }
 
 .footer {
