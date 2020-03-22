@@ -1,0 +1,19 @@
+<div class="categories-wrapper">
+    <!-- <div class="scroll-icons">
+        <i class="fa fa-angle-left"></i>
+        <i class="fa fa-angle-right"></i>
+    </div> -->
+    <div class="categories">
+        <div class="scroll" *ngIf="showScrollArrows">
+            <i class="fa fa-angle-left"></i>
+        </div>
+        <div class="navbar">
+            <ng-container *ngFor="let item of categories">
+                <div class="category-item">{{item.categoryName}}</div>
+            </ng-container>
+        </div>
+        <div class="scroll" *ngIf="showScrollArrows">
+            <i class="fa fa-angle-right"></i>
+        </div>
+    </div>
+</div>

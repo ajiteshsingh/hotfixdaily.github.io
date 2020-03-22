@@ -20,6 +20,7 @@ import { AllPostsComponent } from "./views/homepage/all-posts/all-posts.componen
 import { PopularPostsComponent } from "./views/homepage/popular-posts/popular-posts.component";
 import { PostpageComponent } from "./views/postpage/postpage.component";
 import { PostPreviewComponent } from "./views/homepage/post-preview/post-preview.component";
+import { CategoriesComponent } from './views/header/categories/categories.component';
 
 const appRoutes: Routes = [
   {
@@ -40,7 +41,8 @@ const appRoutes: Routes = [
     AllPostsComponent,
     PopularPostsComponent,
     PostpageComponent,
-    PostPreviewComponent
+    PostPreviewComponent,
+    CategoriesComponent
   ],
   imports: [
     BrowserModule,
