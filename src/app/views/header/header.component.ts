@@ -33,6 +33,10 @@ export class HeaderComponent implements OnInit, AfterViewInit {
     window.open('https://github.com/hotfixdaily/hotfixdaily.github.io');
   }
 
+  replaceChinaApps() {
+    this.router.navigateByUrl('/apps/replace-china-apps');
+  }
+
   // createDisplayCategoriess() {
   //   const impCategory = [];
   //   for (let i = 0; i < this.allCategories.length; i++) {
