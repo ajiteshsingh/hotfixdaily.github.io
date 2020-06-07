@@ -17,4 +17,20 @@ export class ReplaceChinaAppComponent implements OnInit, AfterViewInit {
     element.muted = 'muted';
   }
 
+  async share() {
+    const shareData = {
+      title: 'Replace Chine Apps - Array Of Code',
+      text: 'Detect Installed china apps and find replacement for all china apps',
+      url: 'http://localhost:4200/apps/replace-china-apps',
+    };
+
+    let newNavigator: any;
+    newNavigator = window.navigator;
+    try {
+      await newNavigator.share(shareData);
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
 }
