@@ -1,4 +1,5 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
+import { FetchDataService } from 'src/app/services/fetch-data.service';
 
 @Component({
   selector: 'app-replace-china-app',
@@ -7,7 +8,10 @@ import { Component, OnInit, AfterViewInit } from '@angular/core';
 })
 export class ReplaceChinaAppComponent implements OnInit, AfterViewInit {
 
-  constructor() { }
+  count: number;
+  constructor(
+    private fetchDataService: FetchDataService
+  ) { }
 
   ngOnInit() {
   }
@@ -15,9 +19,14 @@ export class ReplaceChinaAppComponent implements OnInit, AfterViewInit {
   ngAfterViewInit() {
     const element = document.getElementById('video') as any;
     element.muted = 'muted';
+    this.fetchDataService.getDownloadsCount('replace_china_apps').then((c) => {
+      this.count = c as number;
+    });
   }
 
   downloadAPK() {
+    this.fetchDataService.updateCount(this.count + 1);
+    this.count += 1;
     window.open('https://hotfixdaily-media.s3.ap-south-1.amazonaws.com/common/replace-china-apps.apk');
   }
 
