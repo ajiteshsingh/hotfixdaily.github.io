@@ -1,0 +1,153 @@
+html {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+}
+
+.bg {
+    animation: slide 3s ease-in-out infinite alternate;
+    background-image: linear-gradient(-60deg, #6c3 50%, #09f 50%);
+    bottom: 0;
+    left: -50%;
+    opacity: 0.5;
+    position: fixed;
+    right: -50%;
+    top: 0;
+    z-index: -1;
+}
+
+.bg2 {
+    animation-direction: alternate-reverse;
+    animation-duration: 4s;
+}
+
+.bg3 {
+    animation-duration: 5s;
+}
+
+.main-wrapper {
+    position: relative;
+}
+
+.content {
+    width: 315px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    img {
+        position: absolute;
+        height: 575px;
+        width: auto;
+        top: 0;
+        left: 0;
+    }
+
+    video {
+        position: absolute;
+        height: 503px;
+        top: 43px;
+        left: 25px;
+    }
+}
+
+.download-btn {
+    position: absolute;
+    top: 600px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+h1 {
+    font-family: monospace;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(-25%);
+    }
+    100% {
+        transform: translateX(25%);
+    }
+}
+
+// @import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css");
+// @import url(https://fonts.googleapis.com/css?family=Open + Sans);
+* {
+    font-family: "Open Sans", "sans-serif";
+}
+
+html,
+body {
+    overflow: hidden;
+}
+
+ul {
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+li {
+    display: inline-block;
+    margin: 10px;
+}
+
+.download {
+    width: 200px;
+    height: 60px;
+    background: black;
+    float: left;
+    border-radius: 5px;
+    position: relative;
+    color: #fff;
+    cursor: pointer;
+    border: 1px solid #fff;
+}
+
+svg {
+    height: 60px;
+    position: absolute;
+    left: 15px;
+    width: 30px;
+    top: 0;
+    fill: #fff;
+}
+
+.download > .fa {
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+}
+
+.df,
+.dfn {
+    position: absolute;
+    left: 60px;
+}
+
+.df {
+    top: 20px;
+    font-size: 0.68em;
+}
+
+.dfn {
+    top: 22px;
+    font-size: 1.08em;
+    font-family: medium-content-sans-serif-font, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial,
+        sans-serif !important;
+}
+
+.download:hover {
+    -webkit-filter: invert(100%);
+    filter: invert(100%);
+}
