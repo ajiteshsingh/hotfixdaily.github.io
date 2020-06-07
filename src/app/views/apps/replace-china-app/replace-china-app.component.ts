@@ -17,6 +17,10 @@ export class ReplaceChinaAppComponent implements OnInit, AfterViewInit {
     element.muted = 'muted';
   }
 
+  downloadAPK() {
+    window.open('https://hotfixdaily-media.s3.ap-south-1.amazonaws.com/common/replace-china-apps.apk');
+  }
+
   async share() {
     const shareData = {
       title: 'Replace Chine Apps - Array Of Code',
