@@ -61,6 +61,13 @@
   }
 }
 
+@media (max-width: 500px) {
+  .name {
+    font-size: 14px;
+    font-weight: 600;
+  }
+}
+
 .github-link {
   cursor: pointer;
 }

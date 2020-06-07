@@ -27,7 +27,14 @@ export class HeaderComponent implements OnInit, AfterViewInit {
     this.router.navigateByUrl('/');
   }
 
-  ngAfterViewInit() { }
+  ngAfterViewInit() {
+    const element = document.getElementById('logo-name');
+    if (window.innerWidth < 500) {
+      element.innerText = '[ ]';
+    } else {
+      element.innerText = '[Array, of, Code]';
+    }
+  }
 
   openGithubRepo() {
     window.open('https://github.com/hotfixdaily/hotfixdaily.github.io');
