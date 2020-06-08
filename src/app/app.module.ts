@@ -23,6 +23,7 @@ import { PostPreviewComponent } from './views/homepage/post-preview/post-preview
 import { CategoriesComponent } from './views/header/categories/categories.component';
 import { FooterComponent } from './views/footer/footer.component';
 import { ReplaceChinaAppComponent } from './views/apps/replace-china-app/replace-china-app.component';
+import { DeviceDetectorModule } from 'ngx-device-detector';
 
 const appRoutes: Routes = [
   {
@@ -62,7 +63,8 @@ const appRoutes: Routes = [
     HighlightModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
-    CommonModule
+    CommonModule,
+    DeviceDetectorModule.forRoot()
   ],
   providers: [
     {

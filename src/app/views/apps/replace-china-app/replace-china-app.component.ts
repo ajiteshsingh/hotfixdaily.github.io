@@ -1,5 +1,6 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { FetchDataService } from 'src/app/services/fetch-data.service';
+import { DeviceDetectorService } from 'ngx-device-detector';
 
 @Component({
   selector: 'app-replace-china-app',
@@ -9,11 +10,15 @@ import { FetchDataService } from 'src/app/services/fetch-data.service';
 export class ReplaceChinaAppComponent implements OnInit, AfterViewInit {
 
   count: number;
+  isMobile = false;
+
   constructor(
-    private fetchDataService: FetchDataService
+    private fetchDataService: FetchDataService,
+    private deviceDetectorService: DeviceDetectorService
   ) { }
 
   ngOnInit() {
+    this.isMobile = this.deviceDetectorService.isMobile();
   }
 
   ngAfterViewInit() {
@@ -22,10 +27,6 @@ export class ReplaceChinaAppComponent implements OnInit, AfterViewInit {
     this.fetchDataService.getDownloadsCount('replace_china_apps').then((c) => {
       this.count = c as number;
     });
-    const shareElement = document.getElementById('share-button');
-    if (window.innerWidth > 600) {
-      shareElement.style.display = 'none';
-    }
   }
 
   downloadAPK() {

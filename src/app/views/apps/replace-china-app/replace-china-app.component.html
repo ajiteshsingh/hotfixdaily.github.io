@@ -33,7 +33,7 @@
                     </div>
                 </li>
             </div>
-            <div id="share-button" class="share" (click)="share()">
+            <div *ngIf="isMobile" id="share-button" class="share" (click)="share()">
                 <img src="assets/share-alt-solid.svg" alt="">
             </div>
         </div>
