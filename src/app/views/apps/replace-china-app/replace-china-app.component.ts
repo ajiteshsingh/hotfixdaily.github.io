@@ -22,6 +22,10 @@ export class ReplaceChinaAppComponent implements OnInit, AfterViewInit {
     this.fetchDataService.getDownloadsCount('replace_china_apps').then((c) => {
       this.count = c as number;
     });
+    const shareElement = document.getElementById('share-button');
+    if (window.innerWidth > 600) {
+      shareElement.style.display = 'none';
+    }
   }
 
   downloadAPK() {
