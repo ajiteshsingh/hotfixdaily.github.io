@@ -33,9 +33,9 @@ export class ReplaceChinaAppComponent implements OnInit, AfterViewInit {
 
   async share() {
     const shareData = {
-      title: 'Replace Chine Apps - Array Of Code',
-      text: 'Detect Installed china apps and find replacement for all china apps',
-      url: 'http://localhost:4200/apps/replace-china-apps',
+      title: 'Make India Aatmanirbhar\n',
+      text: 'I am removing china apps from my device and installing replacement apps suggested in this app. Try it out\n\n',
+      url: 'https://www.arrayofcode.com/apps/replace-china-apps',
     };
 
     let newNavigator: any;
