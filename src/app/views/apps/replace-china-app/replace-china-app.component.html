@@ -9,7 +9,7 @@
     </div>
     <div class="content">
         <div class="download-btn">
-            <div class="btn">
+            <a class="btn" href="https://hotfixdaily-media.s3.ap-south-1.amazonaws.com/common/replace-china-apps.apk">
                 <li>
                     <div (click)="downloadAPK()" class="download android">
                         <svg width="700px" height="700px" viewBox="0 0 40 48" version="1.1" id="android">
@@ -30,7 +30,7 @@
                         <span class="dfn">Download APP</span>
                     </div>
                 </li>
-            </div>
+            </a>
             <div *ngIf="isMobile" id="share-button" class="share" (click)="share()">
                 <img src="assets/share-alt-solid.svg" alt="">
             </div>
