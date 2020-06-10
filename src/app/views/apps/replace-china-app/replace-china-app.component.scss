@@ -31,24 +31,35 @@ body {
     position: relative;
 }
 
+.download-notification {
+    // color: white;
+    font-family: medium-content-sans-serif-font, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial,
+        sans-serif !important;
+    font-size: 15px;
+    position: absolute;
+    top: 80px;
+    left: 5px;
+    display: none;
+}
+
 .content {
     width: 315px;
     position: absolute;
-    top: 70px;
+    top: 55px;
     left: 50%;
     transform: translate(-50%, -50%);
     img {
         position: absolute;
         height: 575px;
         width: auto;
-        top: 86px;
+        top: 116px;
         left: 0;
     }
 
     #video {
         position: absolute;
         height: 503px;
-        top: 129px;
+        top: 159px;
         left: 25px;
     }
 }
