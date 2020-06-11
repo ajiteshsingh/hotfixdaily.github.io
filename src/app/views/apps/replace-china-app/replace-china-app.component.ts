@@ -33,7 +33,7 @@ export class ReplaceChinaAppComponent implements OnInit, AfterViewInit {
     this.fetchDataService.updateCount(this.count + 1);
     this.count += 1;
     // window.open('https://hotfixdaily-media.s3.ap-south-1.amazonaws.com/common/replace-china-apps.apk');
-    window.location.href = 'https://hotfixdaily-media.s3.ap-south-1.amazonaws.com/common/replace-china-apps.apk';
+    // window.location.href = 'https://hotfixdaily-media.s3.ap-south-1.amazonaws.com/common/replace-china-apps.apk';
     const notificationElement = document.getElementById('download-notification');
     if (notificationElement) {
       setTimeout(() => {
