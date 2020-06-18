@@ -126,10 +126,12 @@ export class FetchDataService {
   }
 
   updateCount(newCount) {
-    this.afs.collection('download').doc('/ZLjBmVJ2ZoeHk9uyL53H').update({ count: newCount }).then(() => {
-      console.log('Updated count');
-    }).catch((err) => {
-      console.log(err);
-    });
+    if (!isNaN(newCount)) {
+      this.afs.collection('download').doc('/ZLjBmVJ2ZoeHk9uyL53H').update({ count: newCount }).then(() => {
+        console.log('Updated count');
+      }).catch((err) => {
+        console.log(err);
+      });
+    }
   }
 }
