@@ -34,9 +34,13 @@
           <code>{{ component.text }}</code>
         </ng-container>
 
-        <ng-container *ngIf="component.type == 'code'">
-          <pre><code [highlight]="component.text" (highlighted)="onHighlight($event)" [lineNumbers]="true"></code></pre>
+        <ng-container *ngIf="component.type == 'json'">
+          <pre [innerHTML]="getJSON(component)"></pre>
         </ng-container>
+
+        <!-- <ng-container *ngIf="component.type == 'code'">
+          <pre><code [highlight]="component.text" (highlighted)="onHighlight($event)" [lineNumbers]="true"></code></pre>
+        </ng-container> -->
       </div>
     </ng-container>
   </ng-container>

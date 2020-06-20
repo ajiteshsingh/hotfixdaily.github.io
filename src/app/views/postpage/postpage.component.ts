@@ -20,7 +20,7 @@ export class PostpageComponent implements OnInit, AfterViewInit {
     private postPageService: PostPageService,
     private router: ActivatedRoute,
     private fetchDataService: FetchDataService
-  ) {}
+  ) { }
 
   ngOnInit() {
     console.log("adding console");
@@ -43,7 +43,7 @@ export class PostpageComponent implements OnInit, AfterViewInit {
               console.log(err);
             });
         })
-        .catch(error => {});
+        .catch(error => { });
     });
   }
 
@@ -55,5 +55,10 @@ export class PostpageComponent implements OnInit, AfterViewInit {
       top: "{...}",
       value: "{...}"
     };
+  }
+
+  getJSON(component) {
+    const json = JSON.parse(component.text);
+    return JSON.stringify(json, undefined, 2);
   }
 }
