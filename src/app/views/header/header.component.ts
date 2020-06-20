@@ -28,12 +28,12 @@ export class HeaderComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit() {
-    const element = document.getElementById('logo-name');
-    if (window.innerWidth < 500) {
-      element.innerText = '[ ]';
-    } else {
-      element.innerText = '[Array, of, Code]';
-    }
+    // const element = document.getElementById('logo-name');
+    // if (window.innerWidth < 500) {
+    //   element.innerText = '[ ]';
+    // } else {
+    //   element.innerText = '[Array, of, Code]';
+    // }
   }
 
   openGithubRepo() {
