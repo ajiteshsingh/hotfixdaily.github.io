@@ -47,7 +47,7 @@ export class FetchDataService {
 
   getAllBlogs(): Observable<Blog[]> {
     this.allBlogs = this.afs
-      .collection('blogs')
+      .collection('blogs', ref => ref.orderBy('created_at', 'desc'))
       .snapshotChanges()
       .pipe(
         map(changes => {

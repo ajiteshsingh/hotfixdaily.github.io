@@ -1,4 +1,4 @@
-import { Component, OnInit, AfterViewInit } from "@angular/core";
+import { Component, OnInit, AfterViewInit, ViewEncapsulation } from "@angular/core";
 import { ActivatedRoute } from "@angular/router";
 import { HighlightResult } from "ngx-highlightjs";
 
@@ -8,7 +8,8 @@ import { Blog } from "src/app/models/db-collections";
 @Component({
   selector: "app-postpage",
   templateUrl: "./postpage.component.html",
-  styleUrls: ["./postpage.component.scss"]
+  styleUrls: ["./postpage.component.scss"],
+  encapsulation: ViewEncapsulation.None,
 })
 export class PostpageComponent implements OnInit, AfterViewInit {
   postJson: any = null;
