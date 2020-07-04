@@ -1,6 +1,7 @@
 @import "src/app/style/variables";
 
 .postpage-wrapper {
+  overflow-x: hidden;
   display: flex;
   flex-direction: column;
   max-width: 680px !important;
@@ -56,11 +57,18 @@ pre {
   padding: 15px;
   font-family: $font-family;
   border-radius: 5px;
+  // white-space: pre-wrap; /* css-3 */
+  // white-space: -moz-pre-wrap; /* Mozilla */
+  // white-space: -pre-wrap; /* Opera 4-6 */
+  // white-space: -o-pre-wrap; /* Opera 7 */
+  // word-wrap: break-word;
+  overflow-x: auto; /* Use horizontal scroller if needed; for Firefox 2, not needed in Firefox 3 */
   white-space: pre-wrap; /* css-3 */
-  white-space: -moz-pre-wrap; /* Mozilla */
+  white-space: -moz-pre-wrap !important; /* Mozilla, since 1999 */
   white-space: -pre-wrap; /* Opera 4-6 */
   white-space: -o-pre-wrap; /* Opera 7 */
-  word-wrap: break-word;
+  /* width: 99%; */
+  word-wrap: break-word; /* Internet Explorer 5.5+ */
 }
 
 a {
@@ -71,4 +79,8 @@ a {
 .nostyle {
   list-style-type: none !important;
   list-style: none !important;
+}
+
+pre {
+  margin-left: 40px;
 }
