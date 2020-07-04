@@ -10,7 +10,7 @@
 }
 
 .post-section {
-  margin: 20px 0;
+  // margin: 20px 0;
   padding: 0 20px;
   width: calc(100% - 80px);
   img {
@@ -32,6 +32,7 @@ p {
   text-align: justify;
 }
 .text {
+  margin: 20px 0;
   line-height: 25px;
   font-family: $font-family;
   b {
@@ -55,4 +56,9 @@ pre {
   padding: 15px;
   font-family: $font-family;
   border-radius: 5px;
+}
+
+a {
+  font-family: medium-content-sans-serif-font, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial,
+    sans-serif !important;
 }

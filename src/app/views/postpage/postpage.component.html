@@ -38,6 +38,10 @@
           <pre [innerHTML]="getJSON(component)"></pre>
         </ng-container>
 
+        <ng-container *ngIf="component.type == 'interlink'">
+          <a href="{{component.url}}">{{component.text}}</a>
+        </ng-container>
+
         <!-- <ng-container *ngIf="component.type == 'code'">
           <pre><code [highlight]="component.text" (highlighted)="onHighlight($event)" [lineNumbers]="true"></code></pre>
         </ng-container> -->
