@@ -56,9 +56,19 @@ pre {
   padding: 15px;
   font-family: $font-family;
   border-radius: 5px;
+  white-space: pre-wrap; /* css-3 */
+  white-space: -moz-pre-wrap; /* Mozilla */
+  white-space: -pre-wrap; /* Opera 4-6 */
+  white-space: -o-pre-wrap; /* Opera 7 */
+  word-wrap: break-word;
 }
 
 a {
   font-family: medium-content-sans-serif-font, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial,
     sans-serif !important;
+}
+
+.nostyle {
+  list-style-type: none !important;
+  list-style: none !important;
 }

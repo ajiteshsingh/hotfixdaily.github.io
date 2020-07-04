@@ -31,7 +31,8 @@
         </ng-container>
 
         <ng-container *ngIf="component.type == 'quote'">
-          <code>{{ component.text }}</code>
+          <!-- <code>{{ component.text }}</code> -->
+          <pre>{{component.text}}</pre>
         </ng-container>
 
         <ng-container *ngIf="component.type == 'json'">
